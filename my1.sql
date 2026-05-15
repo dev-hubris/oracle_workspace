@@ -270,10 +270,15 @@ FROM employees
 WHERE department_id in (20, 30);   
 
 16) 급여가 많은 사원부터 출력하되 급여가 같은 경우 사원명(first_name) 순서대로 출력하시오.
- 
+SELECT *
+FROM employees
+ORDER BY salary DESC, first_name ASC;
+
 
 17) 업무이 'MAN' 끝나는 사원의 사원명(first_name), 급여(salary), 업무(job_id)을 출력하시오.
-
+SELECT first_name, salary, job_id
+FROM employees
+WHERE job_id like '%MAN';
 
  
  
